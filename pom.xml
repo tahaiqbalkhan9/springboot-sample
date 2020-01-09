@@ -12,10 +12,12 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-
-		<java.version>1.8</java.version>
-
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+			<java.version>1.8</java.version>
+		    <swagger.version>2.9.2</swagger.version>
+  			<swagger-annotations.version>1.5.21</swagger-annotations.version>
+  			<swagger-models.version>1.5.21</swagger-models.version>
+  			<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  			<lombok.version>1.16.20</lombok.version>
 	</properties>
 
 	<parent>
@@ -49,7 +51,39 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+			
+			<!-- Swagger Dependencies -->
+	<dependency>
+		<groupId>io.springfox</groupId>
+		<artifactId>springfox-swagger2</artifactId>
+		<version>${swagger.version}</version>
+	</dependency>
 
+	<dependency>
+		<groupId>io.springfox</groupId>
+		<artifactId>springfox-swagger-ui</artifactId>
+		<version>${swagger.version}</version>
+	</dependency>
+
+	<dependency>
+
+		<groupId>io.swagger</groupId>
+		<artifactId>swagger-annotations</artifactId>
+		<version>${swagger-annotations.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>io.swagger</groupId>
+		<artifactId>swagger-models</artifactId>
+		<version>${swagger-models.version}</version>
+	</dependency>
+	
+			<!-- Lombok, Removing boiler plate code -->
+			<dependency>
+			    <groupId>org.projectlombok</groupId>
+			    <artifactId>lombok</artifactId>
+			    <version>${lombok.version}</version>
+			</dependency>	
 	</dependencies>
 
 	<build>
