@@ -6,6 +6,17 @@ Current active working branch is **development**.
 
 This project makes use of **Project Lombok**, so you need to setup your IDE to use lombok, just dropin a jar. More details at: https://projectlombok.org/
 
+
+### How to Run:
+- Requires Java 8, Maven 4, Lombok
+- Checkout the project
+- navigate to **development** branch
+- Go to project root, issue command:
+**mvn spring-boot:run **
+
+- Navigate to: http://localhost:8080/users
+
+
 ### Features already in Project:
 - Spring boot framework
 - Some unit test cases
