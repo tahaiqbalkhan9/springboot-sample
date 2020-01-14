@@ -3,6 +3,7 @@ Spring boot testing project for play around features for spring boot, test cases
 
 
 Current active working branch is **development**.
+
 This project makes use of **Project Lombok**, so you need to setup your IDE to use lombok, just dropin a jar. More details at: https://projectlombok.org/
 
 ### Features already in Project:
