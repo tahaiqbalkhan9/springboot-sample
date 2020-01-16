@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: nz.co.warehousegroup.springboot_sample.AppTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in nz.co.warehousegroup.springboot_sample.AppTest

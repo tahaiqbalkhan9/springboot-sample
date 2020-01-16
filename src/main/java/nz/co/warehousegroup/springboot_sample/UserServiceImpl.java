@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
-public class HelloServiceImpl implements UserService{
+public class UserServiceImpl implements UserService{
 
 	@Override
 	public List<Integer> getUserIds() {
