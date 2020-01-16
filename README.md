@@ -1,3 +1,4 @@
+
 # springboot-sample
 Spring boot testing project for play around features for spring boot, test cases and api docs.
 
@@ -10,11 +11,17 @@ This project makes use of **Project Lombok**, so you need to setup your IDE to u
 ### How to Run:
 - Requires Java 8, Maven 4, Lombok
 - Checkout the project
-- navigate to **development** branch
-- Go to project root, issue command: **mvn spring-boot:run**
+- navigate to **development** branch.
+- Navigate to project root, issue command:   **mvn spring-boot:run**
 
 - Navigate to: http://localhost:8080/users
 
+#### How to Kill app:
+It is noticed that Ctrl+c won't terminate the springboot app. The solution on windows is to find the id and kill the process:
+```sh
+d:\> netstat -ano | find "8080"
+d:\> taskkill /F /PID 19276 -- 19726 is process id retrieved in previous step
+```
 
 ### Features already in Project:
 - Spring boot framework
