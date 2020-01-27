@@ -22,6 +22,12 @@ It is noticed that Ctrl+c won't terminate the springboot app. The solution on wi
 d:\> netstat -ano | find "8080"
 d:\> taskkill /F /PID 19276 -- 19726 is process id retrieved in previous step
 ```
+### How to Create executable jar:
+- run command ```mvn package```. Will generate jar file under **target** folder
+- run jar file by ```java -jar target/springboot-sample-0.0.1-SNAPSHOT.jar```
+- Navigate to: http://localhost:8080/users 
+
+- More Details at: https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins.html
 
 ### Features already in Project:
 - Spring boot framework
