@@ -1,3 +1,4 @@
 /target/
 /.idea/
-/springboot-sample.iml
+/*.iml
+.DS_Store
