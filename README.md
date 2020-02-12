@@ -32,7 +32,7 @@ More Details at: https://docs.spring.io/spring-boot/docs/current/reference/html/
 ### How to deploy jar on Docker:
 - install docker. On windows and mac you can refer to https://www.docker.com/products/docker-desktop.
 - confirm docker installed successfully by running command ```docker --version```
-- run command ```mvn package```. Will generate jar file under **target** folder
+- run command ```mvn package && mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)```
 - run command ```docker build -t springboot-sample . ``` to build docker container
 - run command ```docker run -p 8080:8080 -t springboot-sample:latest ``` to kickoff the server 
     - For Remote Debug ```docker run -e "JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,address=5005,server=y,suspend=n" -p 8080:8080 -p 5005:5005 -t springboot-sample```
