@@ -27,7 +27,8 @@ d:\> taskkill /F /PID 19276 -- 19726 is process id retrieved in previous step
 - run jar file by ```java -jar target/springboot-sample-0.0.1-SNAPSHOT.jar```
 - Navigate to: http://localhost:8080/users 
 
-More Details at: https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins.html
+More Details at:
+<br>https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins.html
 
 ### How to deploy jar on Docker:
 - install docker. On windows and mac you can refer to https://www.docker.com/products/docker-desktop.
@@ -39,7 +40,20 @@ More Details at: https://docs.spring.io/spring-boot/docs/current/reference/html/
     - Configure on Intellij refer to https://blog.jetbrains.com/idea/2019/04/debug-your-java-applications-in-docker-using-intellij-idea/
 - Navigate to: http://localhost:8080/users 
 
-More Details at: https://spring.io/guides/gs/spring-boot-docker/
+More Details at:
+<br>https://spring.io/guides/gs/spring-boot-docker/
+
+### How to deploy jar on Kubernetes:
+- you should have docker desktop (with kubernetes) running on your system. confirm by running below commands:
+    - docker ```docker --version```
+    - kubernetes ```kubectl version```
+- run shell script ```./kubectl-build.sh``` to kickoff deployment on kubernetes
+- Navigate to: http://localhost:8080/users 
+
+More Details at:
+<br>https://spring.io/guides/gs/spring-boot-kubernetes/
+<br>https://kubernetes.io/docs/tutorials/kubernetes-basics/
+<br>https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0
 
 ### Features already in Project:
 - Spring boot framework
