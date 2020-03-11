@@ -6,7 +6,11 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo "Hello World from stage BUILD"'
-                sh 'mvn --version'
+            }
+        }
+        stage('malang') {
+            steps {
+                sh 'echo "Hi from Malang internal"'
             }
         }
     }
