@@ -1,19 +1,16 @@
 /* Jenkinsfile (Declarative Pipeline) */
 
 pipeline {
-    agent {
-
-        dockerfile {
-            
-           	filename 'Dockerfile'
-        }
-
+    agent any
+    environment {
+        TEST_VARIABLE = 'blah*&&&*&*&&'
     }
     stages {
         stage('build') {
             steps {
-                sh 'echo "Hello World from stage BUILD"'
-                sh 'java -version'
+                echo "Hello World from stage BUILD"
+                java -version
+                echo "the env variable is $TEST_VARIABLE"
             }
         }
     }
