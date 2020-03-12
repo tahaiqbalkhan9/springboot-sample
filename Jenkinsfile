@@ -1,17 +1,19 @@
 /* Jenkinsfile (Declarative Pipeline) */
 
 pipeline {
-    agent any
+    agent {
+
+        dockerfile {
+            label 'testbuild'
+           	filename 'Dockerfile'
+        }
+
+    }
     stages {
         stage('build') {
             steps {
                 sh 'echo "Hello World from stage BUILD"'
                 sh 'java -version'
-            }
-        }
-        stage('malang') {
-            steps {
-                sh 'echo "Hi from Malang internal"'
             }
         }
     }
