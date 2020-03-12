@@ -13,7 +13,15 @@ pipeline {
                 echo "the env variable is $TEST_VARIABLE"
             }
         }
+        
+        stage('Sanity check') {
+            steps {
+                input "Does the staging environment look ok?"
+            }
+        }
     }
+    
+    
     post {
         always {
             echo 'This will always run'
