@@ -6,6 +6,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo "Hello World from stage BUILD"'
+                sh 'java -version'
             }
         }
         stage('malang') {
