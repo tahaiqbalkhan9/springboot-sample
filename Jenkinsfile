@@ -4,7 +4,7 @@ pipeline {
     agent {
 
         dockerfile {
-            label 'testbuild'
+            
            	filename 'Dockerfile'
         }
 
