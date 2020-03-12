@@ -9,7 +9,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Hello World from stage BUILD"
-                java -version
+                sh 'java -version'
                 echo "the env variable is $TEST_VARIABLE"
             }
         }
