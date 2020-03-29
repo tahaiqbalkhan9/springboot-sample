@@ -48,6 +48,7 @@ More Details at:
     - docker ```docker --version```
     - kubernetes ```kubectl version```
 - run shell script ```./kubectl-build.sh``` to kickoff deployment on kubernetes
+- (For First Time ONLY) ```kubectl expose deployment springboot-sample --type=LoadBalancer --port 8080 --target-port 8080``` 
 - Navigate to: http://localhost:8080/users 
 
 More Details at:

@@ -18,7 +18,8 @@ spec:
         app: springboot-sample
     spec:
       containers:
-      - image: springboot-sample
+#      - image: saliabbasraza/springboot-sample #For Google Cloud
+      - image: localhost:5000/springboot-sample #For local repository
         name: springboot-sample
         env:
           - name: MY_POD_NAME
@@ -37,21 +38,21 @@ spec:
         resources: {}
 status: {}
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  creationTimestamp: null
-  labels:
-    app: springboot-sample
-  name: springboot-sample
-spec:
-  ports:
-  - name: 8080-8080
-    port: 8080
-    protocol: TCP
-    targetPort: 8080
-  selector:
-    app: springboot-sample
-  type: LoadBalancer
-status:
-  loadBalancer: {}
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  creationTimestamp: null
+#  labels:
+#    app: springboot-sample
+#  name: springboot-sample
+#spec:
+#  ports:
+#  - name: 8080-8080
+#    port: 8080
+#    protocol: TCP
+#    targetPort: 8080
+#  selector:
+#    app: springboot-sample
+#  type: LoadBalancer
+#status:
+#  loadBalancer: {}
