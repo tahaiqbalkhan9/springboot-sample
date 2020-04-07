@@ -20,7 +20,7 @@ public class UserController {
     @ApiOperation(value = "Base path of user API")
     @RequestMapping("/")
     public String index(HttpServletRequest request) {
-        return "Greetings from Spring Boot | Running on " + System.getenv("HOSTNAME");
+        return "Greetings from Spring Boot || Running on " + System.getenv("HOSTNAME");
     }
 
     @RequestMapping("/users")
