@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.List;
 
 @Api(tags = "User API")
@@ -20,7 +22,13 @@ public class UserController {
     @ApiOperation(value = "Base path of user API")
     @RequestMapping("/")
     public String index(HttpServletRequest request) {
-        return "Greetings from Spring Boot | Running on " + System.getenv("HOSTNAME");
+        String hostName = "";
+        try {
+            hostName = InetAddress.getLocalHost().getHostName();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return "Greetings from Spring Boot | Running on " + hostName;
     }
 
     @RequestMapping("/users")
