@@ -28,7 +28,7 @@ public class UserController {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        return "Greetings from Spring Boot | Running on " + hostName;
+        return "Greetings from Spring Boot || Running on " + hostName;
     }
 
     @RequestMapping("/users")
